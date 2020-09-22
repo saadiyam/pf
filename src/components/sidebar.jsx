@@ -29,7 +29,7 @@ export default class Sidebar extends Component {
               <ul class="nav navbar-nav">
                 <li>
                   <a
-                    href="#colorlib-hero"
+                    href="#"
                     data-nav-section="home"
                     data-toggle="collapse"
                     data-target=".navbar-collapse"

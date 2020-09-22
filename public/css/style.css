@@ -110,18 +110,6 @@ figure figcaption {
   position: relative;
 }
 
-.container-fluid {
-  background-image: url("../images/about-bg.png");
-}
-
-@media screen and (max-width: 760px) {
-  .container-fluid {
-    background-image: url("../images/about-resp.png");
-    width: 100%;
-    height: auto;
-  }
-}
-
 @media screen and (max-width: 500px) {
   .container-fluid {
     background-image: none;
@@ -132,7 +120,41 @@ figure figcaption {
   max-width: 1170px;
   margin: 0 auto;
 }
-
+.arrow {
+  position: absolute;
+  top: 91vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.arrow span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 5px solid #06a8ff;
+  border-right: 5px solid #06a8ff;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
 #colorlib-main {
   width: 90%;
   margin-left: auto;
@@ -172,6 +194,19 @@ figure figcaption {
   min-height: 400px;
   position: relative;
 }
+
+@media screen and (max-width: 868px) {
+  #colorlib-hero .flexslider .slides li {
+    background-image: url("../images/about-resp.png") !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #colorlib-hero .flexslider .slides li {
+    background-image: none !important;
+  }
+}
+
 #colorlib-hero .flexslider .flex-control-nav {
   bottom: 20px;
   z-index: 1000;
@@ -218,10 +253,6 @@ figure figcaption {
   position: relative;
 }
 
-.about-img {
-  width: 100vw;
-  height: 100vh;
-}
 @media screen and (max-width: 768px) {
   #colorlib-hero .flexslider .slider-text > .slider-text-inner {
     text-align: center;
@@ -258,10 +289,6 @@ figure figcaption {
 }
 #colorlib-hero .flexslider .slider-text > .slider-text-inner .heading-section {
   font-size: 50px;
-}
-
-#colorlib-hero .flexslider .slider-text > .slider-text-inner .icon-mail {
-  font-size: 25px;
 }
 
 @media screen and (max-width: 768px) {
